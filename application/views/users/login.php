@@ -1,0 +1,11 @@
+<?php
+defined('BASEPATH') OR exit('No direct script access allowed');
+?><!DOCTYPE html>
+<html>
+<head>
+	<title>Logout</title>
+</head>
+<body>
+<h1>Login Page</h1>
+</body>
+</html>
