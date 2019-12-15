@@ -11,8 +11,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			parent::__construct();
             
 		}
-
-        
         
         public function login(){
             
@@ -23,7 +21,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             
             if($this->form_validation->run() === FALSE){
                 
-                $this->load->view('users/login');
+                $this->load->view('users/login'); 
                 
             }else{
                 //get the email and password
@@ -60,10 +58,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     
                 }
                 
-                
-                //$pass = password_hash($pass, PASSWORD_BCRYPT, array('cost' => 12)); 
-            }
-            
+            }  
 			
 		}
+        
+        
+        public function register()
+        {
+            
+        }
+        
 	}
