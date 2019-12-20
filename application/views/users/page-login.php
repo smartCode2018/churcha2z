@@ -13,9 +13,13 @@
         <div class="row">
             <div class="col-lg-6 mx-auto">
                 <div class="xs-form-group form-style-2 wow fadeInUp">
-                    <form action="<?=site_url('users/enterKey')?>" method="POST" class="xs-form">
+                <?php echo validation_errors(); ?>
+                
+                <?php echo form_open_multipart('sign_in'); ?>
                         <div class="form-group">
-                            <input type="text" class="form-control" name="name" placeholder="User name">
+                            <input type="text" class="form-control" name="email" placeholder="Email">
+                        </div>
+                        <div class="form-group">
                             <input type="password" class="form-control" name="password" placeholder="Password">
                         </div>
                         <div class="media justify-content-between">
@@ -30,7 +34,7 @@
                         <div class="xs-btn-wraper">
                             <input type="submit" class="btn btn-primary" value="Sign in">
                         </div>
-                        <p class="form-info">Not registered yet,  <a href="<?=site_url('/')?>">select a package</a></p>
+                        <p class="form-info">Not registered yet,  <a href="<?=site_url('/sign_up')?>">Register</a></p>
                     </form>
                 </div>
             </div>        

@@ -64,9 +64,9 @@ defined('BASEPATH') or exit('No direct script access allowed');
                     </div>
                     <div class="col-md-6">
                         <ul class="top-menu">
-                            <li><a href="<?=site_url('login')?>"><i class="icon icon-key2"></i> Login</a></li>
+                            <!-- <li><a href="<?=site_url('login')?>"><i class="icon icon-key2"></i> Login</a></li> -->
                             <!-- <li><a href="signup.html">Sign Up</a></li> -->
-                            <li><a href="#"><i class="icon icon-hours-support"></i> Support</a></li>
+                            <!-- <li><a href="<?=site_url('sign_up')?>"><i class="icon icon-hours-support"></i> Register</a></li> -->
                         </ul>
                     </div>
                 </div><!-- .row END -->
@@ -84,7 +84,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                             </a>
                         </div>
                     </div>
-                    <div class="col-lg-8">
+                    <div class="col-lg-10">
                         <nav class="xs-menus">
                             <div class="nav-header">
                                 <a class="nav-brand" href="index.html">
@@ -96,17 +96,25 @@ defined('BASEPATH') or exit('No direct script access allowed');
                                 <ul class="nav-menu align-to-right">
                                 <li><a href="<?= site_url('/') ?>">Home</a>
                                     </li>
-
-                                    <li><a href="<?= site_url('/login') ?>">Login</a>
-                                    </li>
-                                    <!-- <li><a href="#">Register</a>    -->
+                                    <li><a href="<?=site_url('/packages')?>">Packages</a>   
                                     </li>
                                     <li><a href="contact.html">Contact</a></li>
+                                    <?php if(!$this->session->userdata('logged_in')) : ?>
+                                        <li><a href="<?= site_url('/sign_in') ?>">Login</a>
+                                        </li>
+                                        <li><a href="<?=site_url('/sign_up')?>">Register</a>   
+                                        </li>
+                                    <?php endif; ?>
+                                    <?php if($this->session->userdata('logged_in')) : ?>
+                                        <li><a href="<?= site_url('/sign_out') ?>">Logout</a>
+                                        </li>
+                                    <?php endif; ?>
+                                    
                                 </ul>
                             </div>
                         </nav>
                     </div>
-                    <div class="col-lg-2">
+                    <!-- <div class="col-lg-2">
                         <ul class="xs-menu-tools">
                             <li>
                                 <a href="#modal-popup-1" class="languageSwitcher-button xs-modal-popup"><i class="icon icon-internet"></i></a>
@@ -121,7 +129,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                                 <a href="#" class="navSidebar-button"><i class="icon icon-burger-menu"></i></a>
                             </li>
                         </ul>
-                    </div>
+                    </div> -->
                 </div><!-- .row END -->
             </div><!-- .container END -->
         </header> <!-- End header section -->

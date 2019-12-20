@@ -50,8 +50,23 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 |		my-controller/my-method	-> my_controller/my_method
 */
 
+//user auth routes
 $route['login'] = 'users/login';
-$route['register'] = 'users/register';
+$route['register/(:any)'] = 'users/register/$1';
+$route['enter_key/(:any)/(:any)'] = 'users/enter_key/$1/$1';
+
+//super user auth routes
+$route['sign_up'] = 'users/sign_up';
+$route['sign_up/(:any)'] = 'users/sign_up/$1';
+$route['sign_in'] = 'users/sign_in';
+
+//cart checkout route
+$route['checkout/(:any)'] = 'users/checkout/$1';
+
+$route['packages'] = 'users/packages';
+
+//dashboard routes
+$route['dashboard'] = 'dashboard/index';
 
 $route['default_controller'] = 'welcome';
 $route['404_override'] = '';

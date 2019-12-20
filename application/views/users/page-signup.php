@@ -15,28 +15,15 @@
                     <div class="form-group">
                         <input type="text" class="form-control" name="fname" placeholder="First Name" required>
                         <!-- <input type="text" class="form-control" name="company-name" placeholder="Company name"> -->
-                        
-                        <input type="text" class="form-control" name="address" placeholder="Address">
-                        <input type="text" class="form-control" name="city" placeholder="City">
-                        <input type="text" class="form-control" name="zipcode" placeholder="Zip Code">
-                        <input type="number" class="form-control" name="phone-number" placeholder="Phone number" required>
+                        <input type="number" class="form-control" name="phone" placeholder="Phone number" required>
                         <input type="password" class="form-control" name="password" placeholder="Password" required>
                         
                     </div>
                 </div>
                 <div class="col-md-6">
                     <div class="form-group">
-                        <input type="text" name="lname" class="form-control" placeholder="Last Name" required>
-                        
+                        <input type="text" name="lname" class="form-control" placeholder="Last Name" required>   
                         <input type="email" name="email" class="form-control" placeholder="Email" required>
-                        <input type="text" name="site" class="form-control" placeholder="State/Region">
-                        <select name="country" id="country" class="form-control">
-                            <option value="Nigeria" selected>Nigeria</option>
-                            <option value="UK">UK</option>
-                            <option value="USA">USA</option>
-                            <option value="Jermany">Germany</option>
-                        </select>
-                        <input type="text" name="church" class="form-control" placeholder="Church Name">
                         <input type="password" name="confirm-password" class="form-control" placeholder="Confirm password" required>
                         
                     </div>

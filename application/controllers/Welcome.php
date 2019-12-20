@@ -15,9 +15,15 @@ class Welcome extends CI_Controller {
 
 	public function index()
 	{
-		$data = $this->json->G();
+		//$data = $this->json->G();
+
+		//gets all the packages
+		$package = $this->package_model->get_packages();
+
+		$data['package'] = $package;
+
 		$this->load->view('layout/landing-header');
-		$this->load->view('welcome/welcome_message');
+		$this->load->view('welcome/welcome_message', $data);
 		$this->load->view('layout/landing-footer');
 	}
 }
